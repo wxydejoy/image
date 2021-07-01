@@ -1,0 +1,19 @@
+{
+  "name": "wxydeimage",
+  "version": "1.0.0",
+  "description": "tuchuang",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxydejoy/image.git"
+  },
+  "author": "wxydejoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wxydejoy/image/issues"
+  },
+  "homepage": "https://github.com/wxydejoy/image#readme"
+}
