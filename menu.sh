@@ -11,6 +11,7 @@ cd ${HexoPath}
 
 npm version patch 
 sleep 1s
+git pull
 git add .    
 git commit  -m ' ty '
 git push -u origin master
