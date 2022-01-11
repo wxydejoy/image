@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wxydejoy/image/issues"
   },
-  "homepage": "https://github.com/wxydejoy/image#readme"
+  "homepage": "https://github.com/wxydejoy/image#readme",
+  "dependencies": {
+    "package-deployer": "^1.0.2"
+  }
 }
