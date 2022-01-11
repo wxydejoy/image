@@ -6,28 +6,19 @@ on:
       - master
 
 jobs:
-  publish-npm:
+  deployment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-          registry-url: https://registry.npmjs.org/
-      
-      - name: Setup Python
-        uses: actions/setup-python@v2.2.2
-        with:
-          python-version: 3.7
-
-      - name: Install dependencies
-        run: python -m pip install --upgrade pip
-        
-      - name: run  scripts
-       
-        run: |
-          python main.py
-      
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    - uses: actions/checkout@v2
+    - name: Setting up the environment
+      run: npm install
+    - name: Deploying version
+      uses: ./
+      with:
+        pkg_name: package-deployer
+        pkg_managers: '[github, npm]'
+        npm_registry: registry.npmjs.org
+        npm_access_token: ${{secrets.NPM_AUTH_TOKEN}}
+        github_access_token: ${{secrets.G_AUTH_TOKEN}}
+        dry_run: true
+        debug: true
