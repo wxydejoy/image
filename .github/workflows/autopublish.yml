@@ -16,8 +16,8 @@ jobs:
       - name: 'change version'
         uses: polygon-software/npm-version-date@master
         with:
-          schema: 'V.yyMM.t'
-          V: '2'
+          schema: 'V.yyMMdd.hhmm'
+          V: '3'
           increase-patch: true
       
 
